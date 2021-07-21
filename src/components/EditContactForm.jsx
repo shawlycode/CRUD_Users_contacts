@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
+import './Editform.css';
 
 class EditContactForm extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class EditContactForm extends Component {
       <Form onSubmit={this.handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
-          <Form.Control
+          <Form.Control className="inputs"
             type="text"
             placeholder="Enter name here"
             name="name"
@@ -47,7 +48,7 @@ class EditContactForm extends Component {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Email</Form.Label>
-          <Form.Control
+          <Form.Control className="inputs"
             type="email"
             placeholder="enter valid email here"
             name="email"
@@ -57,7 +58,7 @@ class EditContactForm extends Component {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Gen</Form.Label>
-          <Form.Control
+          <Form.Control className="inputs"
             type="number"
             placeholder="enter gen here"
             name="gen"
@@ -65,7 +66,7 @@ class EditContactForm extends Component {
             onChange={this.handleChange}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="btn">
           Submit
         </Button>
       </Form>
