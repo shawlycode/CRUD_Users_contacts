@@ -12,6 +12,7 @@ const Contacts = (props) => {
               userInfo={user}
               key={user.id}
               deleteUser={props.deleteUser}
+              editUser={props.editUser}
             />
           );
         })}
