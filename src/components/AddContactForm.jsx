@@ -26,7 +26,8 @@ class AddContactForm extends Component {
     this.setState({
         name: "",
         email: "",
-        gen: ""
+        gen: "",
+        id:""
     })
   };
   render() {
