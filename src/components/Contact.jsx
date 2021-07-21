@@ -19,7 +19,7 @@ const Contact = (props) => {
           <Modal.Title>Edit VIP Info</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <EditContactForm userInfo={props.userInfo}/>
+          <EditContactForm userInfo={props.userInfo} editUser={props.editUser} closeModal={handleClose}/>
         </Modal.Body>
        
       </Modal>
