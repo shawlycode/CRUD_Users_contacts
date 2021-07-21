@@ -9,27 +9,27 @@ class EditContactForm extends Component {
       name: props.userInfo.name,
       email: props.userInfo.email,
       gen: props.userInfo.gen,
-      id: props.userInfo.id
+      id: props.userInfo.id,
     };
   }
 
   handleChange = (e) => {
     e.preventDefault();
     this.setState({
-        // console.log(this.state)
+      // console.log(this.state)
       [e.target.name]: e.target.value,
     });
   };
-  handleSubmit = (e) =>{
+  handleSubmit = (e) => {
     e.preventDefault();
     // console.log("form submited succefully", this.state);
-    this.props.addNewData(this.state);
+    this.props.editUser(this.state);
     this.setState({
-        name: "",
-        email: "",
-        gen: "",
-        id:""
-    })
+      name: "",
+      email: "",
+      gen: "",
+    });
+    this.props.closeModal();
   };
   render() {
     return (
