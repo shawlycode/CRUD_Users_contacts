@@ -6,9 +6,10 @@ class EditContactForm extends Component {
     super(props);
 
     this.state = {
-      name: "",
-      email: "",
-      gen: "",
+      name: props.userInfo.name,
+      email: props.userInfo.email,
+      gen: props.userInfo.gen,
+      id: props.userInfo.id
     };
   }
 
