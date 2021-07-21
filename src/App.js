@@ -20,11 +20,14 @@ class App extends Component {
   };
   deleteUser = (id) => {
     let savedUsers = this.state.data.filter((newData) => newData.id !==id);
-    this.setState({
-      data: savedUsers,
-    });
+    this.setState({data: savedUsers });
   };
+  handleEditUser = (updatedUser) =>{
+    this.setState({
+      data: this.state.data.map(user => user.id ===updatedUser.id ? updatedUser : user)
+    })
 
+  }
   render() {
     return (
       <>
@@ -37,6 +40,7 @@ class App extends Component {
               <Contacts
                 userData={this.state.data}
                 deleteUser={this.deleteUser}
+                editUser={this.handleEditUser}
               />
             </Col>
           </Row>
