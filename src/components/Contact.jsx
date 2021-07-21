@@ -24,7 +24,7 @@ const Contact = (props) => {
        
       </Modal>
       <Col md="4" style={{ marginBottom: "1rem", textAlign: "start" }}>
-        <Card>
+        <Card style={{backgroundColor:"#EDEEF7" }}>
           <Card.Body>
             <Card.Title>VIP USERS</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">
