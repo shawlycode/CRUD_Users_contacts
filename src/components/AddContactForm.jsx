@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {useAction} from './Actions/userAction'
+import { useAction } from './Actions/userAction'
 import { Form, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 
@@ -17,19 +17,19 @@ class AddContactForm extends Component {
   handleChange = (e) => {
     e.preventDefault();
     this.setState({
-        // console.log(this.state)
+      // console.log(this.state)
       [e.target.name]: e.target.value,
     });
   };
-  handleSubmit = (e) =>{
+  handleSubmit = (e) => {
     e.preventDefault();
     // console.log("form submited succefully", this.state);
     this.props.addNewData(this.state);
     this.setState({
-        name: "",
-        email: "",
-        gen: "",
-        id:""
+      name: "",
+      email: "",
+      gen: "",
+      id: ""
     })
   };
   render() {
@@ -74,6 +74,6 @@ class AddContactForm extends Component {
   }
 }
 const mapDispatchToProps = {
-  addNewData : userAction
+  addNewData: userAction
 }
-export default connect(null,mapDispatchToProps) (AddContactForm);
+export default connect(null, mapDispatchToProps)(AddContactForm);
