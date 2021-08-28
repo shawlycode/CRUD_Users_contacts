@@ -1,6 +1,6 @@
 export const ADD_USER = "ADD_USER"
 
-export const addUser = (user) => {
+export const addNewUser = (user) => {
     console.log("addUser", user);
     user.id = Math.random().toString();
     return {

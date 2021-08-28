@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import Contact from "./Contact";
+import { connect } from 'react-redux';
 
 const Contacts = (props) => {
   return (
@@ -20,5 +21,9 @@ const Contacts = (props) => {
     </Container>
   );
 };
-
-export default Contacts;
+const mapStatesToProps = (state) => {
+  return {
+    Contacts: state.data,
+  }
+}
+export default connect(mapStatesToProps) (Contacts);

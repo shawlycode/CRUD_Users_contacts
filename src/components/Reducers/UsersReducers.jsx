@@ -1,15 +1,15 @@
 
 const initialState = {
-    users: []
+    data: []
 };
 
 const usersReducers = (state = initialState, action) => {
     switch (action.type) {
 
         case "ADD_USER":
-            console.log(action.payload)
+            // console.log(action.payload)
 
-            return { ...state, users:[ ...state.users, action.payload ] };
+            return { ...state, data:[ ...state.data, action.payload ] };
 
             default:return state;
     }
