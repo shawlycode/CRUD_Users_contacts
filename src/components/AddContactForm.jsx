@@ -74,6 +74,7 @@ class AddContactForm extends Component {
   }
 }
 const mapDispatchToProps = {
-  addNewData: addNewUser
+  addData: addNewUser
 }
-export default AddContactForm;
+//problem with this function  connect(nul, mapStateToProps) (AddContactForm)
+export default connect(null, mapDispatchToProps) (AddContactForm);
