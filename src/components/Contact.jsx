@@ -38,12 +38,12 @@ const Contact = (props) => {
             </Card.Text>
             <Card.Link>
               <Button variant="success" size="sm" onClick={handleShow}>
-                Edit
+                Edit Data
               </Button>
             </Card.Link>
             <Card.Link>
               <Button variant="danger" size="sm" onClick={handleDelete}>
-                Delete
+                Delete Data
               </Button>
             </Card.Link>
           </Card.Body>
